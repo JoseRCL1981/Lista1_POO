@@ -240,6 +240,14 @@ produto3 = float(input('Mostre o preço do terceiro produto R$: '))
 valor_total = produto1 + produto2 + produto3
 print(f'Calcule o valor total da compra R$: {valor_total:.2f}\n')
 
+# 27. Converte dias para semanas e dias
+# Peça um valor em dias e converta para semanas e dia (por exemplo, 10 dias = 1 semana e 3 dias).
+print('Converte dias para semanas e dias\n')
+dias = int(input('Mostre o valor em dias: '))
+semanas = dias // 7
+dias_restantes = dias % 7
+print(f'Mostre o valor em semanas e dias: {semanas} semanas e {dias_restantes} dias\n')
+
 
 # 28. Desconto progressivo
 # Peça o valor de uma compra e aplique um desconto 5% se o valor for maior que R$ 100 e de 10% se for maior que R$ 500.
@@ -249,8 +257,8 @@ if valor_compra > 500:
     desconto = 0.10
 elif valor_compra > 100:
     desconto = 0.05
-    valor_com_desconto = valor_compra - (valor_compra * desconto)
-    print(f'Mostre o valor da compra com desconto R$: {valor_com_desconto:.2f}\n')
+valor_com_desconto = valor_compra - (valor_compra * desconto)
+print(f'Mostre o valor da compra com desconto R$: {valor_com_desconto:.2f}\n')
 
 
 # 29. Divisão com casas decimais limitadas
