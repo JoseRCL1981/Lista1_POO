@@ -251,20 +251,19 @@ print(f'Mostre o valor em semanas e dias: {semanas} semanas e {dias_restantes} d
 
 # 28. Desconto progressivo
 # Peça o valor de uma compra e aplique um desconto 5% se o valor for maior que R$ 100 e de 10% se for maior que R$ 500.
-print('Desconto progressivo\n')
-valor_compra = float(input('Mostre o valor da compra R$: '))
-desconto1 = (valor_compra * 5) /100
-desconto2 = (valor_compra * 10) /100
-if valor_compra > 100:
-    desconto1 = 0.05
-    valor_com_desconto1 = valor_compra - (valor_compra * desconto1)
-    print(f'Mostre o valor da compra com desconto R$: {valor_com_desconto1:.2f}\n')
-
-elif valor_compra > 500:
-    desconto2 = 0.10
-    valor_com_desconto2 = valor_compra - (valor_compra * desconto2)
-    print(f'Mostre o valor da compra com desconto R$: {valor_com_desconto2:.2f}\n')
-
+valor_da_compra = float(input('Mostre o valor da compra R$: '))
+if valor_da_compra > 500:
+    desconto = 0.1
+    valor_com_desconto = valor_da_compra - (valor_da_compra * desconto)
+    print(f'Mostre o valor com desconto R$: {valor_com_desconto:.2f}\n')
+elif valor_da_compra > 100 and valor_da_compra <= 500:
+    desconto = 0.05
+    valor_com_desconto = valor_da_compra - (valor_da_compra * desconto)
+    print(f'Mostre o valor com desconto R$: {valor_com_desconto:.2f}\n')
+else: valor_da_compra <= 100
+desconto = 0
+print(f'Mostre o valor da compra R$: {valor_da_compra:.2f}\n')
+    
 
 # 29. Divisão com casas decimais limitadas
 # Peça dois números e mostre o resultado da divisão com apenas duas casas decimais.
